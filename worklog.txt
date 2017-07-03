@@ -1,0 +1,35 @@
+Proposal
+rewrite timer to single unified gud version
+- help including some popover graphic?
+- use local storage to persist options across sessions?
+- unit tests
+- use that millis thing instead of setTimeout()
+- ui re-design?
+- desktop notifications api
+
+
+Testable Note
+Half right about timer: need to mock function dependencies - functions do need
+to call each other sometimes
+
+Timer code was wrong because
+- ui buttons were mapped to js functions. Better way would be to have buttons
+  start processes made of chains of pure functions
+  Pure functions < interface
+- functions called other functions
+- vars were manipulated in a global way instead of passing through args
+- my use of document was hard to mock? Make an object with this.document =
+  document?
+
+To fix, make functions more pure
+Run sequences in dedicated places
+Put dom interaction in its own file for easier mocking
+
+http://stackoverflow.com/questions/16868821/unit-testing-javascript-that-involves-the-dom
+http://stackoverflow.com/questions/3974147/how-can-we-execute-unit-tests-against-dom-manipulation/4178173#4178173
+
+A message system is good for testable code
+
+Settings add combinatorial exlosion of test cases, use with caution
+
+Dependency injection, inversion of control
