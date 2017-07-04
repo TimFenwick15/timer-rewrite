@@ -1,4 +1,4 @@
-function notifyMe() {
+function doNotify() {
   // Let's check if the browser supports notifications
   if (!("Notification" in window)) {
     alert("This browser does not support desktop notification");
@@ -24,3 +24,6 @@ function notifyMe() {
   // want to be respectful there is no need to bother them any more.
 }
 
+function notifyMe() {
+  setTimeout(() => doNotify(), 5000);
+}

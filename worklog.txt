@@ -33,3 +33,33 @@ A message system is good for testable code
 Settings add combinatorial exlosion of test cases, use with caution
 
 Dependency injection, inversion of control
+
+
+Experiments
+- Desktop notifivations work when tab not active (not in Chrome from file:///)
+- css transformY good button annimation. Doesn't displace other page elements
+- localStorage:
+    > localStorage.setItem("timtmp", 3)
+    < undefined
+    > localStorage['timtmp']
+    < "3"
+    > localStorage.timtmp
+    < "3"
+  recommended to use Web Storage API (setItem, getItem, removeItem, key, length)
+- will try a service worker on gh-pages - see if I can install timer on
+  homescreen
+- try push notifications
+- MVC structure. Try
+  https://stackoverflow.com/questions/8497833/hello-world-in-mvc-pattern
+
+to do
+- look at timer code - can I avoid using setInterval for my timing?
+  - should be fine as is
+- read testable js article
+- plan functions / structure. Think testability
+- @media for resizing
+- maybe transpile
+- maybe make a beep sound again
+- maybe time in inputs roll over
+
+
